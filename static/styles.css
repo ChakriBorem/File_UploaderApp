@@ -1,0 +1,115 @@
+/* 🌈 Background animation */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0078d7, #50a3c3, #00c9ff);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌟 Upload container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  color: #333;
+  transition: 0.3s;
+}
+
+input[type="file"]:hover {
+  background: #f0f0f0;
+}
+
+button {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #ee0979, #ff6a00);
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.success {
+  color: #baffb0;
+}
+
+.error {
+  color: #ffb0b0;
+}
+
+#fileLink a {
+  color: #fff;
+  text-decoration: underline;
+  word-wrap: break-word;
+  display: block;
+  margin-top: 15px;
+}
+
+/* 🌐 Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffffc0;
+}

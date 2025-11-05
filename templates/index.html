@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure File Uploader</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>☁️ Upload File to Azure Blob Storage</h1>
+    <p class="subtitle">Easily upload and store your files securely in Azure cloud</p>
+
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload</button>
+
+    <p id="status"></p>
+    <p id="fileLink"></p>
+  </div>
+
+  <footer>
+    <p>Developed by <strong>Chakravardhan Reddy Borem</strong> | Azure Blob Storage Project 🌐</p>
+  </footer>
+
+  <script>
+    async function uploadFile() {
+      const file = document.getElementById('fileInput').files[0];
+      if (!file) return alert('Please select a file.');
+
+      document.getElementById('status').innerText = '⏳ Uploading...';
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const res = await fetch('/upload', { method: 'POST', body: formData });
+      const data = await res.json();
+
+      if (!res.ok) {
+        document.getElementById('status').innerText = '❌ ' + data.error;
+        document.getElementById('status').className = 'error';
+      } else {
+        document.getElementById('status').innerText = '✅ Upload successful!';
+        document.getElementById('status').className = 'success';
+        document.getElementById('fileLink').innerHTML = `<a href="${data.file_url}" target="_blank">${data.file_url}</a>`;
+      }
+    }
+  </script>
+</body>
+</html>
