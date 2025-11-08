@@ -3,7 +3,7 @@
 ---
 
 ## 🎯 Objective
-A simple web app built with **Flask (Python)** that allows users to upload files to **Azure Blob Storage** through a clean web interface.  
+To build a simple web app with **Flask (Python)** that allows users to upload files to **Azure Blob Storage** through a clean web interface.  
 The backend runs on Flask, while the app is deployed on **Vercel (serverless)** for free hosting.
 
 ---
@@ -57,4 +57,5 @@ python app.py
 | **Runtime Detection**     | Vercel failed to identify Flask runtime.                                    | Added `vercel.json` to specify entry point and runtime.         |
 
 ---
+
 
