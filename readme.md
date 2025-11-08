@@ -44,4 +44,17 @@ CONTAINER_NAME=uploads
 
 # 4️⃣ Run locally
 python app.py
+```
+
+---
+
+## 🧩 Challenges Faced
+
+| Issue                     | Description                                                                 | Solution                                                        |
+| ------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| **CORS Errors**           | The browser initially blocked uploads due to Azure Blob CORS configuration. | Configured CORS rules in Azure Blob Storage.                    |
+| **Authentication Errors** | Uploads failed due to permission issues.                                    | Used secure `.env` variables instead of hard-coded credentials. |
+| **Runtime Detection**     | Vercel failed to identify Flask runtime.                                    | Added `vercel.json` to specify entry point and runtime.         |
+
+---
 
