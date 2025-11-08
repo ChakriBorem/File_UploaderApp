@@ -1,5 +1,8 @@
-# 🌩️ Azure File Uploader (Flask + Vercel)
+# 🌩️ Challenge 1: Cloud Platform Usage
 
+---
+
+## 🎯 Objective
 A simple web app built with **Flask (Python)** that allows users to upload files to **Azure Blob Storage** through a clean web interface.  
 The backend runs on Flask, while the app is deployed on **Vercel (serverless)** for free hosting.
 
@@ -41,3 +44,4 @@ CONTAINER_NAME=uploads
 
 # 4️⃣ Run locally
 python app.py
+
